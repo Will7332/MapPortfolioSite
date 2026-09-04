@@ -7,19 +7,31 @@
     <link rel="icon" type="image/png" href="images/Worldtemples-09.png">
     <title>About Me</title>
     <link type="text/css" rel="stylesheet" href="styles.css">
+    <script src="nav.mjs" type="module" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <!-- <a href = "index.html">
-                <img src = "images/Templemaplogo-06.png" class = "imglogo">
-            </a> -->
             <img src="images/Templemaplogo-06.png" class="imglogo" alt="logo">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="exploremaps.html">Explore maps</a>
+                <a href="aboutme.html">About Me</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="sideMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <aside class="side-menu" id="sideMenu">
+            <button class="side-menu-close" id="sideMenuClose" aria-label="Close menu">&times;</button>
             <a href="index.html">Home</a>
             <a href="exploremaps.html">Explore maps</a>
             <a href="aboutme.html">About Me</a>
-        </nav>
+        </aside>
     </header>
 
     <main>
