@@ -29,21 +29,18 @@ console.log(maps.name);
 //******MODAL******//
 
 function viewerTemplate(pic, alt,) {
-    return `<div class="viewer">
-                <button class="close">X</button>
-                <img class="enlarged" src="${pic}" alt="${alt}">
-                <p>${maps.description}</p>
-            </div>`;
+    return `<button class="close">X</button>
+            <img class="enlarged" src="${pic}" alt="${alt}">`;
 }
 
 function viewHandler(event) {
     console.log("function called");
 
     const clicked = event.target;
-    if (clicked.tagName === "IMG") {  
+    if (clicked.tagName === "IMG") {
         const modalContainer = document.createElement("div");
-        modalContainer.innerHTML = viewerTemplate(clicked.src, clicked.alt);
         modalContainer.classList.add("viewer");
+        modalContainer.innerHTML = viewerTemplate(clicked.src, clicked.alt);
 
         document.body.appendChild(modalContainer);
 
